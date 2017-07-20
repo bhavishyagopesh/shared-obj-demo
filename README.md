@@ -55,3 +55,4 @@ This is a shared obj...
 This is a shared function
 ```
 
+Link: http://www.cprogramming.com/tutorial/shared-libraries-linux-gcc.html#fnref:loadorder
