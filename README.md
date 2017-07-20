@@ -1,4 +1,4 @@
-## Method to prepare a shared-object(.so):
+## Different methods to prepare a shared-object(.so):
 
 1. Using `$LD_LIBRARY_PATH` env variable:
 
@@ -16,8 +16,10 @@ gcc -L /path/to/libfoo -Wall -o final main.c -lfoo
 export LD_LIBRARY_PATH=/path/to/libfoo
 #sets LD_LIBRARY_PATH env-variable
 
-./test
+./final
 ```
+
+Temporary output->
 
 ```text
 This is a shared obj...
@@ -30,6 +32,8 @@ This is a shared function
 gcc -L /path/to/libfoo -Wl,-rpath=/path/to/libfoo -Wall -o final main.c -lfoo
 ./final
 ```
+
+Temporary output->
 ```text
 This is a shared obj...
 This is a shared function
@@ -42,7 +46,10 @@ This is a shared function
 cp /path/to/libfoo/libfoo.so /usr/lib
 chmod 0755 /usr/lib/libfoo.so
 gcc -Wall -o final  main.c -lfoo
+./final
 ```
+
+Temporary output->
 ```text
 This is a shared obj...
 This is a shared function
