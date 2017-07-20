@@ -11,10 +11,10 @@ gcc -shared -o libfoo.so foo.o
 #create a shared-library 
 
 gcc -L /path/to/libfoo -Wall -o final main.c -lfoo
-# -L gives path to shared object
+# -L gives path to shared object to "Linker"
 
 export LD_LIBRARY_PATH=/path/to/libfoo
-#sets LD_LIBRARY_PATH env-variable
+#sets LD_LIBRARY_PATH env-variable for "Loader"
 
 ./final
 ```
